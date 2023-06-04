@@ -1,4 +1,5 @@
 # Discord Bot
-meow
+for fun
 
-another meow
+## Credits
+[dev-alto](https://github.com/dev-alto)
