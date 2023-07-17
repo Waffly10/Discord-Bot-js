@@ -1,11 +1,14 @@
-const { SlashCommandBuilder } = require('discord.js')
+const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js')
+//picstures
+const Heads = new AttachmentBuilder('../discordbot/assets/pics/coinflip/heads.png');
+const Tails = new AttachmentBuilder('../discordbot/assets/pics/coinflip/tails.png');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('coinflip')
         .setDescription('Heads or tails :3'),
     async execute(interaction) {
-
+        
         await interaction.reply(
             {
                 "content": "",
@@ -42,18 +45,19 @@ module.exports = {
                             {
                             "id": 460565032,
                             "author": {
-                                "name": "Tails",
-                                //"icon_url": "https://cdn.discordapp.com/attachments/1114434297319915520/1114661417702924288/PngItem_1352730.png",
+                                "name": "Heads",
                                 "url": "https://discord.com/api/oauth2/authorize?client_id=1114429673376579585&permissions=8&scope=bot%20applications.commands"
                             },
                             "color": 16754756,
                             "image": {
-                                "url": "https://cdn.discordapp.com/attachments/1114434297319915520/1114665126960828526/image.png"
+                                "url": "attachment://heads.png"
                             }
                             }
                         ]
+                        , files: [Heads]
                     }
-                )
+                ).then (function () { interaction.channel.send(`Tadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa :D`) })
+
             }   else {
                 //tails
                 interaction.channel.send(
@@ -62,23 +66,22 @@ module.exports = {
                             {
                             "id": 460565032,
                             "author": {
-                                "name": "Heads",
-                                //"icon_url": "https://cdn.discordapp.com/attachments/1114434297319915520/1114661417702924288/PngItem_1352730.png",
+                                "name": "Tails",
                                 "url": "https://discord.com/api/oauth2/authorize?client_id=1114429673376579585&permissions=8&scope=bot%20applications.commands"
                             },
                             "color": 16754756,
                             "image": {
-                                "url": "https://cdn.discordapp.com/attachments/1114434297319915520/1114665416200036432/image.png"
+                                "url": "attachment://tails.png"
                             }
                             }
                         ]
+                        , files: [Tails]
                     }
-                )
+                ).then (function () { interaction.channel.send(`Tadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa :D`) })
             }
-
-            interaction.channel.send(`Tadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa :D`)
-            
+        
         }, 3000);
+        
 
         //meow meow meow meow meow meow meow meow
 

@@ -66,4 +66,5 @@ client.on(Events.InteractionCreate, async interaction => {
         }
     }
 })
+console.log('772317775485861969 & 359896709624758273')
 ////////////////////////////////

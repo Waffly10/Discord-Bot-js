@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js')
-const { catList } = require('../../random-cat-library.json')
+const { catList } = require('../../assets/jsonFiles/random-cat-library.json')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -70,7 +70,7 @@ module.exports = {
             }
         );
 
-        
+      //add who sent the hitman, get msg servber link
         
     }
 }
