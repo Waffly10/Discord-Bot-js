@@ -1,3 +1,3 @@
 
-node deploy-commands.js
+node deploy-commands.js 
 node index.js
