@@ -1,7 +1,9 @@
 const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js')
+const path = './assets/pics/coinflip/'
+
 //picstures
-const Heads = new AttachmentBuilder('../discordbot/assets/pics/coinflip/heads.png');
-const Tails = new AttachmentBuilder('../discordbot/assets/pics/coinflip/tails.png');
+const Heads = new AttachmentBuilder(path + 'heads.png');
+const Tails = new AttachmentBuilder(path + 'tails.png');
 
 module.exports = {
     data: new SlashCommandBuilder()

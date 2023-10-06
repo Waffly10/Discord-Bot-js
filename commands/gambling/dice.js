@@ -1,11 +1,13 @@
 const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js')
+const path = './assets/pics/die/'
+
 //pictures
-const one = new AttachmentBuilder('../discordbot/assets/pics/die/one.png');
-const two = new AttachmentBuilder('../discordbot/assets/pics/die/two.png');
-const three = new AttachmentBuilder('../discordbot/assets/pics/die/three.png');
-const four = new AttachmentBuilder('../discordbot/assets/pics/die/four.png');
-const five = new AttachmentBuilder('../discordbot/assets/pics/die/five.png');
-const six = new AttachmentBuilder('../discordbot/assets/pics/die/six.png');
+const one = new AttachmentBuilder(path + 'one.png');
+const two = new AttachmentBuilder(path + 'two.png');
+const three = new AttachmentBuilder(path + 'three.png');
+const four = new AttachmentBuilder(path + 'four.png');
+const five = new AttachmentBuilder(path + 'five.png');
+const six = new AttachmentBuilder(path + 'six.png');
 
 module.exports = {
     data: new SlashCommandBuilder()

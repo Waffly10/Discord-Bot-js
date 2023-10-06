@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js')
 //funny cat gif
-const cat = new AttachmentBuilder ('../discordbot/assets/pics/randomNumGen/cat_number.gif')
+const cat = new AttachmentBuilder ('./assets/pics/randomNumGen/cat_number.gif')
 
 
 module.exports = {
